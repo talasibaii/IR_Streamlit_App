@@ -46,7 +46,6 @@ k = st.slider("Top K results", min_value=1, max_value=10, value=5)
 if st.button("Search"):
     query_vec, tokens = get_query_embedding(query)
 
-    st.write("**Query tokens:**", tokens)
 
     if query_vec is None:
         st.error("None of your query words exist in the Word2Vec vocabulary. Try different words.")
